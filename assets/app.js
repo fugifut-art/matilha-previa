@@ -1,39 +1,62 @@
-/* Matilha Pet Club: previa de site. Menu, aviso de previa, aparecer ao rolar e agendamento pelo WhatsApp. */
+/* Matilha Pet Club: previa de site. Topo, menu, aparecer ao rolar e agendamento pelo WhatsApp. */
 (function () {
   'use strict';
   var WHATS = '5511966024153';
-  document.documentElement.classList.add('js');
+  var raiz = document.documentElement;
+  raiz.classList.add('js');
+  var reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* altura do topo fixo (aviso + barra) vira variavel de CSS */
+  var topo = document.getElementById('topo');
+  var medirTopo = function () { raiz.style.setProperty('--topo-h', topo.offsetHeight + 'px'); };
+  medirTopo();
+  if ('ResizeObserver' in window) { new ResizeObserver(medirTopo).observe(topo); }
+  else { window.addEventListener('resize', medirTopo); }
 
   /* aviso de previa */
-  var previa = document.getElementById('previa');
-  if (previa) {
-    previa.querySelector('.previa__fechar').addEventListener('click', function () { previa.classList.add('oculta'); });
+  var aviso = document.getElementById('aviso');
+  if (aviso) {
+    aviso.querySelector('.aviso__fechar').addEventListener('click', function () {
+      aviso.classList.add('oculto');
+      medirTopo();
+    });
   }
 
-  /* topo com sombra ao rolar */
-  var topo = document.getElementById('topo');
-  var marcarTopo = function () { topo.classList.toggle('rolou', window.scrollY > 10); };
-  window.addEventListener('scroll', marcarTopo, { passive: true });
-  marcarTopo();
+  /* topo: transparente sobre a foto ate rolar (no celular) */
+  var whatsFixo = document.querySelector('.whats-fixo');
+  var agendaNaTela = false;
+  var aoRolar = function () {
+    var y = window.scrollY;
+    topo.classList.toggle('rolou', y > 40);
+    if (whatsFixo) {
+      var mostrar = y > window.innerHeight * 0.8 && !agendaNaTela && !topo.classList.contains('menu-aberto');
+      whatsFixo.classList.toggle('mostra', mostrar);
+    }
+  };
+  window.addEventListener('scroll', aoRolar, { passive: true });
+  aoRolar();
 
   /* menu do celular */
-  var menu = document.getElementById('menu');
+  var menu = document.getElementById('menu-cel');
   var menuBtn = document.getElementById('menu-btn');
-  var fecharMenu = function () {
-    menu.classList.remove('aberto');
-    menuBtn.setAttribute('aria-expanded', 'false');
-    menuBtn.setAttribute('aria-label', 'Abrir menu');
+  var menuTxt = menuBtn.querySelector('.menu-btn__txt');
+  var abrirMenu = function (abrir) {
+    menu.classList.toggle('aberto', abrir);
+    topo.classList.toggle('menu-aberto', abrir);
+    raiz.classList.toggle('travado', abrir);
+    menu.setAttribute('aria-hidden', abrir ? 'false' : 'true');
+    menuBtn.setAttribute('aria-expanded', abrir ? 'true' : 'false');
+    menuTxt.textContent = abrir ? 'Fechar' : 'Menu';
+    aoRolar();
   };
-  menuBtn.addEventListener('click', function () {
-    var aberto = menu.classList.toggle('aberto');
-    menuBtn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
-    menuBtn.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
-  });
-  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', fecharMenu); });
+  menuBtn.addEventListener('click', function () { abrirMenu(!menu.classList.contains('aberto')); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { abrirMenu(false); }); });
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && menu.classList.contains('aberto')) abrirMenu(false); });
+  window.matchMedia('(min-width: 1000px)').addEventListener('change', function (m) { if (m.matches) abrirMenu(false); });
 
   /* aparecer ao rolar */
   var revelas = document.querySelectorAll('.revela');
-  if ('IntersectionObserver' in window) {
+  if ('IntersectionObserver' in window && !reduzir) {
     var obs = new IntersectionObserver(function (itens) {
       itens.forEach(function (it) {
         if (it.isIntersecting) { it.target.classList.add('visivel'); obs.unobserve(it.target); }
@@ -44,13 +67,24 @@
     revelas.forEach(function (el) { el.classList.add('visivel'); });
   }
 
-  /* o botao fixo de WhatsApp some enquanto o formulario esta na tela */
-  var whatsFixo = document.querySelector('.whats-fixo');
+  /* o botao fixo de WhatsApp some enquanto o agendamento esta na tela */
   var secaoAgenda = document.getElementById('agendar');
-  if (whatsFixo && secaoAgenda && 'IntersectionObserver' in window) {
+  if (secaoAgenda && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (itens) {
-      whatsFixo.classList.toggle('some', itens[0].isIntersecting);
-    }, { threshold: 0.15 }).observe(secaoAgenda);
+      agendaNaTela = itens[0].isIntersecting;
+      aoRolar();
+    }, { threshold: 0.1 }).observe(secaoAgenda);
+  }
+
+  /* sobre as secoes escuras (Natal e rodape), o botao fixo inverte de cor */
+  if (whatsFixo && 'IntersectionObserver' in window) {
+    var escuras = new Set();
+    var obsEscuro = new IntersectionObserver(function (itens) {
+      itens.forEach(function (it) { if (it.isIntersecting) escuras.add(it.target); else escuras.delete(it.target); });
+      whatsFixo.classList.toggle('no-escuro', escuras.size > 0);
+    }, { rootMargin: '-90% 0px -2% 0px', threshold: 0 });
+    /* so conta quando a secao escura passa pela faixa de baixo da tela, onde o botao fica */
+    document.querySelectorAll('.natal, .rodape').forEach(function (el) { obsEscuro.observe(el); });
   }
 
   /* ---------------- agendamento ---------------- */
@@ -58,6 +92,7 @@
   if (!form) return;
   var etapas = form.querySelectorAll('.etapa');
   var marcas = form.querySelectorAll('.progresso li');
+  var passoTxt = document.getElementById('passo-txt');
   var atual = 1;
   var DIAS = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
 
@@ -139,8 +174,11 @@
       m.classList.toggle('ativo', i + 1 === n);
       m.classList.toggle('feito', i + 1 < n);
     });
-    var primeiro = form.querySelector('.etapa.ativa input, .etapa.ativa select');
-    if (primeiro && window.matchMedia('(min-width: 700px)').matches) primeiro.focus({ preventScroll: true });
+    passoTxt.textContent = 'Passo ' + n + ' de 3';
+    /* no celular, se o topo do formulario ficou pra cima da tela, volta pra ele */
+    if (form.getBoundingClientRect().top < 0) form.scrollIntoView({ behavior: reduzir ? 'auto' : 'smooth', block: 'start' });
+    var primeiro = form.querySelector('.etapa.ativa input:not([type="radio"]), .etapa.ativa select');
+    if (primeiro && window.matchMedia('(min-width: 1000px)').matches) primeiro.focus({ preventScroll: true });
   };
   form.querySelectorAll('[data-proximo]').forEach(function (b) {
     b.addEventListener('click', function () { if (validar(atual)) irPara(atual + 1); });
@@ -149,8 +187,26 @@
     b.addEventListener('click', function () { irPara(atual - 1); });
   });
   /* some o erro quando a pessoa corrige */
-  form.addEventListener('change', function (ev) { if (ev.target.name) erro(ev.target.name === 'raca_outra' ? 'raca' : ev.target.name, false); atualizarPrevia(); });
-  form.addEventListener('input', function (ev) { if (ev.target.name) erro(ev.target.name === 'raca_outra' ? 'raca' : ev.target.name, false); atualizarPrevia(); });
+  var limpar = function (ev) {
+    if (ev.target.name) erro(ev.target.name === 'raca_outra' ? 'raca' : ev.target.name, false);
+    atualizarPrevia();
+  };
+  form.addEventListener('change', limpar);
+  form.addEventListener('input', limpar);
+
+  /* tocar num servico da lista ja deixa ele marcado no agendamento */
+  document.querySelectorAll('.lista-servicos [data-servico], .lista-servicos [data-porte]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var marcar = function (nome, v) {
+        var r = form.querySelector('input[name="' + nome + '"][value="' + v + '"]');
+        if (r) { r.checked = true; erro(nome, false); }
+      };
+      if (a.dataset.servico) marcar('servico', a.dataset.servico);
+      if (a.dataset.porte) marcar('porte', a.dataset.porte);
+      if (atual !== 1) irPara(1);
+      atualizarPrevia();
+    });
+  });
 
   /* a mensagem */
   var montarMensagem = function () {
