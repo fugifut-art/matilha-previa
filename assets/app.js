@@ -6,15 +6,19 @@
   raiz.classList.add('js');
   var reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* altura do topo fixo (aviso + barra) vira variavel de CSS */
+  /* altura do aviso e do topo fixo viram variaveis de CSS */
   var topo = document.getElementById('topo');
-  var medirTopo = function () { raiz.style.setProperty('--topo-h', topo.offsetHeight + 'px'); };
+  var aviso = document.getElementById('aviso');
+  var medirTopo = function () {
+    var a = aviso && !aviso.classList.contains('oculto') ? aviso.offsetHeight : 0;
+    raiz.style.setProperty('--aviso-h', a + 'px');
+    raiz.style.setProperty('--topo-h', (topo.offsetHeight + 12) + 'px');
+  };
   medirTopo();
   if ('ResizeObserver' in window) { new ResizeObserver(medirTopo).observe(topo); }
   else { window.addEventListener('resize', medirTopo); }
 
   /* aviso de previa */
-  var aviso = document.getElementById('aviso');
   if (aviso) {
     aviso.querySelector('.aviso__fechar').addEventListener('click', function () {
       aviso.classList.add('oculto');
@@ -39,14 +43,13 @@
   /* menu do celular */
   var menu = document.getElementById('menu-cel');
   var menuBtn = document.getElementById('menu-btn');
-  var menuTxt = menuBtn.querySelector('.menu-btn__txt');
   var abrirMenu = function (abrir) {
     menu.classList.toggle('aberto', abrir);
     topo.classList.toggle('menu-aberto', abrir);
     raiz.classList.toggle('travado', abrir);
     menu.setAttribute('aria-hidden', abrir ? 'false' : 'true');
     menuBtn.setAttribute('aria-expanded', abrir ? 'true' : 'false');
-    menuTxt.textContent = abrir ? 'Fechar' : 'Menu';
+    menuBtn.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
     aoRolar();
   };
   menuBtn.addEventListener('click', function () { abrirMenu(!menu.classList.contains('aberto')); });
@@ -195,7 +198,7 @@
   form.addEventListener('input', limpar);
 
   /* tocar num servico da lista ja deixa ele marcado no agendamento */
-  document.querySelectorAll('.lista-servicos [data-servico], .lista-servicos [data-porte]').forEach(function (a) {
+  document.querySelectorAll('.servico[data-servico], .servico[data-porte]').forEach(function (a) {
     a.addEventListener('click', function () {
       var marcar = function (nome, v) {
         var r = form.querySelector('input[name="' + nome + '"][value="' + v + '"]');

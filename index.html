@@ -6,7 +6,7 @@
 <title>Matilha Pet Club | Banho e tosa na Vila Antonieta, Zona Leste de SP</title>
 <meta name="description" content="Banho relaxante, tosa, trimming e penteados com hora marcada na Vila Antonieta, Zona Leste de São Paulo. Agende pelo WhatsApp.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1F1915">
+<meta name="theme-color" content="#6E2314">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Matilha Pet Club | Prévia do site">
@@ -17,7 +17,7 @@
 <link rel="icon" href="assets/img/logo-matilha.png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=boska@300,301,400,401,500&amp;f[]=switzer@400,500,600&amp;display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/app.js" defer></script>
 <script type="application/ld+json">
@@ -27,7 +27,10 @@
 <body>
 
 <svg class="sprite" aria-hidden="true">
-  <symbol id="seta" viewBox="0 0 24 24"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="seta" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7"/></symbol>
+  <symbol id="pata" viewBox="0 0 24 24"><ellipse cx="5.2" cy="10.2" rx="2.2" ry="2.8"/><ellipse cx="9.4" cy="5.4" rx="2.2" ry="2.9"/><ellipse cx="14.6" cy="5.4" rx="2.2" ry="2.9"/><ellipse cx="18.8" cy="10.2" rx="2.2" ry="2.8"/><path d="M12 11.4c-2.7 0-5.7 3.4-5.7 6.2 0 1.7 1.2 2.7 2.7 2.7 1.3 0 1.9-.6 3-.6s1.7.6 3 .6c1.5 0 2.7-1 2.7-2.7 0-2.8-3-6.2-5.7-6.2Z"/></symbol>
+  <symbol id="osso" viewBox="0 0 48 24"><rect x="8" y="9" width="32" height="6" rx="3"/><circle cx="8" cy="8" r="4.2"/><circle cx="8" cy="16" r="4.2"/><circle cx="40" cy="8" r="4.2"/><circle cx="40" cy="16" r="4.2"/></symbol>
   <symbol id="whats" viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28Z"/></symbol>
 </svg>
 
@@ -39,39 +42,32 @@
     <button class="aviso__fechar" type="button" aria-label="Fechar aviso da prévia"><span></span></button>
   </div>
   <div class="barra">
-    <div class="barra__inner">
-      <a class="marca" href="#inicio" aria-label="Matilha Pet Club, voltar ao início">
-        <img src="assets/img/logo-matilha.png" alt="" width="40" height="40">
-        <span class="marca__nome">Matilha <span>Pet Club</span></span>
-      </a>
-      <nav class="nav" aria-label="Seções do site">
-        <a href="#experiencia">A experiência</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#natal">Natal</a>
-        <a href="#onde">Onde estamos</a>
-      </nav>
-      <div class="barra__acoes">
-        <a class="btn btn--tinta btn--pequeno" href="#agendar">Agendar</a>
-        <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-cel"><span class="menu-btn__txt">Menu</span><span class="menu-btn__linhas" aria-hidden="true"></span></button>
-      </div>
+    <a class="marca" href="#inicio" aria-label="Matilha Pet Club, voltar ao início">
+      <img src="assets/img/logo-matilha.png" alt="" width="44" height="44">
+      <span class="marca__nome">Matilha<small>Pet Club</small></span>
+    </a>
+    <nav class="nav" aria-label="Seções do site">
+      <a href="#experiencia">A experiência</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#natal">Natal</a>
+      <a href="#onde">Onde estamos</a>
+    </nav>
+    <div class="barra__acoes">
+      <a class="btn btn--ferrugem btn--pequeno" href="#agendar">Agendar</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-cel" aria-label="Abrir menu"><span></span></button>
     </div>
   </div>
 </header>
 
 <div class="menu-cel" id="menu-cel" aria-hidden="true">
   <nav aria-label="Menu">
-    <ol>
-      <li><a href="#experiencia"><span>01</span>A experiência</a></li>
-      <li><a href="#servicos"><span>02</span>Serviços</a></li>
-      <li><a href="#natal"><span>03</span>Natal</a></li>
-      <li><a href="#agendar"><span>04</span>Agendar</a></li>
-      <li><a href="#onde"><span>05</span>Onde estamos</a></li>
-    </ol>
+    <a href="#experiencia">A experiência</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#natal">Natal na Matilha</a>
+    <a href="#agendar">Agendar horário</a>
+    <a href="#onde">Onde estamos</a>
   </nav>
-  <div class="menu-cel__pe">
-    <p>Rua Eng. Guilherme Cristiano Frender, 1485<br>Vila Antonieta, São Paulo</p>
-    <a href="https://wa.me/5511966024153" target="_blank" rel="noopener">WhatsApp (11) 96602-4153</a>
-  </div>
+  <a class="btn btn--ferrugem btn--cheio" href="https://wa.me/5511966024153" target="_blank" rel="noopener"><svg class="whats-ico"><use href="#whats"/></svg>(11) 96602-4153</a>
 </div>
 
 <main id="conteudo">
@@ -81,188 +77,215 @@
     <figure class="hero__foto">
       <img src="assets/img/hero-yorkshire.jpg" alt="Yorkshire com laço de pedrarias e colar depois do banho e tosa na Matilha" width="1200" height="1600" fetchpriority="high">
     </figure>
+    <p class="fantasma hero__fantasma" aria-hidden="true">matilha</p>
     <div class="hero__txt">
-      <p class="rotulo">Banho e tosa &middot; Vila Antonieta, São Paulo</p>
-      <h1>Para muitos, são apenas pets. <em>Para nós, são parte da matilha.</em></h1>
-      <p class="hero__sub">Banho relaxante, tosa e acabamento de salão num ambiente moderno e aconchegante. Sempre com hora marcada.</p>
+      <p class="tag tag--vidro"><svg class="pata-ico"><use href="#pata"/></svg>Banho e tosa &middot; Vila Antonieta, SP</p>
+      <p class="hero__pre">Para muitos, são apenas pets.</p>
+      <h1>Para nós, são parte da matilha.</h1>
+      <p class="hero__sub">Banho relaxante, tosa e acabamento de salão com hora marcada, num ambiente moderno e aconchegante.</p>
       <div class="hero__acoes">
-        <a class="btn btn--tinta" href="#agendar">Agendar horário</a>
-        <a class="link-seta" href="#onde">Como chegar<svg class="seta"><use href="#seta"/></svg></a>
+        <a class="btn btn--branco btn--seta" href="#agendar">Agendar horário<span class="seta-bola"><svg class="seta"><use href="#seta"/></svg></span></a>
+        <a class="btn btn--vidro" href="#onde">Como chegar</a>
       </div>
+    </div>
+    <a class="hero__card" href="#natal">
+      <img src="assets/img/natal-ursos.jpg" alt="" width="440" height="440">
+      <span><strong>Agenda de dezembro aberta</strong>Vagas limitadas pro banho de Natal</span>
+      <span class="seta-bola seta-bola--branca"><svg class="seta"><use href="#seta"/></svg></span>
+    </a>
+    <a class="selo-giro" href="#agendar" aria-label="Agendar horário pelo site">
+      <svg class="selo-giro__txt" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="circulo" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs><text><textPath href="#circulo" textLength="280">AGENDE PELO SITE &#8226; AGENDE PELO SITE &#8226; </textPath></text></svg>
+      <svg class="selo-giro__pata" aria-hidden="true"><use href="#pata"/></svg>
+    </a>
+  </section>
+
+  <!-- FAIXA -->
+  <section class="faixa" aria-label="O que a Matilha faz">
+    <div class="faixa__trilho">
+      <ul class="faixa__grupo">
+        <li>Banho relaxante</li><li>Tosa</li><li>Trimming</li><li>Penteados</li><li>Laços e bandanas</li><li>Todos os portes</li>
+      </ul>
+      <ul class="faixa__grupo" aria-hidden="true">
+        <li>Banho relaxante</li><li>Tosa</li><li>Trimming</li><li>Penteados</li><li>Laços e bandanas</li><li>Todos os portes</li>
+      </ul>
     </div>
   </section>
 
-  <!-- FATOS -->
-  <section class="fatos" aria-label="Por que a Matilha">
-    <ul class="wrap fatos__lista">
-      <li class="revela"><strong>Hora marcada</strong><span>Sem fila e sem pressa. O horário é do seu pet.</span></li>
-      <li class="revela" data-atraso="1"><strong>Todos os portes</strong><span>Do Yorkshire ao Bernese de 50 kg.</span></li>
-      <li class="revela" data-atraso="2"><strong>Dezembro aberto</strong><span>Agenda de fim de ano com vagas limitadas.</span></li>
+  <!-- EXPERIENCIA -->
+  <section class="secao" id="experiencia">
+    <div class="wrap exp">
+      <div class="exp__a">
+        <p class="tag revela"><svg class="pata-ico"><use href="#pata"/></svg>A experiência Matilha</p>
+        <h2 class="revela">Amor e cuidado são o mínimo. O diferencial é como o seu pet se sente aqui.</h2>
+        <figure class="foto foto--alta revela"><img src="assets/img/banho-golden.jpg" alt="Golden de olhos fechados, relaxando na banheira durante o banho" width="640" height="841" loading="lazy"></figure>
+      </div>
+      <div class="exp__b">
+        <figure class="foto revela"><img src="assets/img/banho-bernese.jpg" alt="Bernese recebendo escovação durante o banho" width="640" height="749" loading="lazy"></figure>
+        <p class="exp__txt revela">Na Matilha, o banho é tranquilo e sem pressa. Os pets ficam soltos, ganham colo quando precisam e saem daqui reconhecendo a turma.</p>
+        <ul class="checks revela">
+          <li><svg class="check-ico"><use href="#check"/></svg>Banho que vira brincadeira</li>
+          <li><svg class="check-ico"><use href="#check"/></svg>Livres e à vontade</li>
+          <li><svg class="check-ico"><use href="#check"/></svg>Colo quando precisa</li>
+          <li><svg class="check-ico"><use href="#check"/></svg>Amizade com a equipe</li>
+        </ul>
+        <div class="acoes revela">
+          <a class="btn btn--ferrugem" href="#agendar">Agendar horário</a>
+          <a class="btn btn--linha" href="https://wa.me/5511966024153?text=Ol%C3%A1%2C%20Matilha!%20Vim%20pelo%20site%20e%20queria%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener"><svg class="whats-ico"><use href="#whats"/></svg>(11) 96602-4153</a>
+        </div>
+      </div>
+    </div>
+    <ul class="wrap numeros">
+      <li class="revela"><strong>3 mil+</strong><span>tutores e fãs acompanham a Matilha no Instagram</span></li>
+      <li class="revela" data-atraso="1"><strong>41 mil</strong><span>curtidas no vídeo do banho do Bernese de 50 kg</span></li>
+      <li class="revela" data-atraso="2"><strong>1 ano</strong><span>de Matilha, completado agora em novembro</span></li>
     </ul>
   </section>
 
-  <!-- EXPERIENCIA -->
-  <section class="secao experiencia" id="experiencia">
+  <!-- SERVICOS -->
+  <section class="secao secao--creme" id="servicos">
     <div class="wrap">
-      <p class="rotulo revela">A experiência Matilha</p>
-      <p class="manifesto revela">Amor e cuidado são o mínimo. O que faz a diferença é como o seu pet <em>se sente</em> aqui dentro.</p>
-      <div class="experiencia__grade">
-        <figure class="experiencia__foto revela">
-          <img src="assets/img/banho-golden.jpg" alt="Golden de olhos fechados, relaxando na banheira durante o banho" width="640" height="841" loading="lazy">
-          <figcaption>Banho relaxante, sem pressa.</figcaption>
-        </figure>
-        <ol class="pilares">
-          <li class="revela"><span class="pilares__n">01</span><h3>Banho que vira brincadeira</h3><p>Nada de tensão. O banho é tranquilo, e tem pet que nem quer ir embora.</p></li>
-          <li class="revela"><span class="pilares__n">02</span><h3>Livres e à vontade</h3><p>Os pets ficam soltos, brincam e se sentem em casa enquanto esperam.</p></li>
-          <li class="revela"><span class="pilares__n">03</span><h3>Colo quando precisa</h3><p>Carinho e paciência pra quem chega com medo ou vem pela primeira vez.</p></li>
-          <li class="revela"><span class="pilares__n">04</span><h3>Amizade com a equipe</h3><p>Quem vem uma vez reconhece a turma e volta feliz no próximo banho.</p></li>
-        </ol>
+      <div class="cabeca revela">
+        <p class="tag"><svg class="pata-ico"><use href="#pata"/></svg>Serviços</p>
+        <h2>Banho e tosa pensados pra cada pelagem</h2>
+        <p>O valor muda com o porte e a pelagem. Agende pelo site e a equipe responde com o valor certo pro seu pet.</p>
       </div>
+      <ul class="servicos">
+        <li class="revela"><a class="servico" href="#form-agenda" data-servico="Banho">
+          <span class="servico__txt"><strong>Banho relaxante</strong><span>Com tempo e paciência, do jeito que cada pelagem pede.</span></span>
+          <span class="servico__foto"><img src="assets/img/banho-relaxante.jpg" alt="" width="640" height="750" loading="lazy"><span class="seta-bola"><svg class="seta"><use href="#seta"/></svg></span></span>
+        </a></li>
+        <li class="revela" data-atraso="1"><a class="servico" href="#form-agenda" data-servico="Banho e tosa">
+          <span class="servico__txt"><strong>Banho e tosa</strong><span>O cuidado completo, do banho ao acabamento final.</span></span>
+          <span class="servico__foto"><img src="assets/img/yorkshire-rosto.jpg" alt="" width="720" height="720" loading="lazy"><span class="seta-bola"><svg class="seta"><use href="#seta"/></svg></span></span>
+        </a></li>
+        <li class="revela" data-atraso="2"><a class="servico" href="#form-agenda" data-servico="Tosa ou trimming">
+          <span class="servico__txt"><strong>Tosa e trimming</strong><span>Acabamento alinhado, respeitando a raça e o seu estilo.</span></span>
+          <span class="servico__foto"><img src="assets/img/trimming-spitz.jpg" alt="" width="900" height="828" loading="lazy"><span class="seta-bola"><svg class="seta"><use href="#seta"/></svg></span></span>
+        </a></li>
+        <li class="revela" data-atraso="3"><a class="servico" href="#form-agenda" data-servico="Penteado e acabamento">
+          <span class="servico__txt"><strong>Penteados</strong><span>Laços, bandanas e penteados de princesa.</span></span>
+          <span class="servico__foto"><img src="assets/img/penteado-princesa.jpg" alt="" width="900" height="911" loading="lazy"><span class="seta-bola"><svg class="seta"><use href="#seta"/></svg></span></span>
+        </a></li>
+      </ul>
     </div>
   </section>
 
   <!-- RACAS -->
-  <section class="faixa" aria-label="Raças que a Matilha atende">
-    <div class="faixa__trilho">
-      <ul class="faixa__grupo">
-        <li>Golden</li><li>Chow chow</li><li>Yorkshire</li><li>Maltês</li><li>Spitz</li><li>Shih Tzu</li><li>Bernese</li><li>e a do seu pet</li>
-      </ul>
-      <ul class="faixa__grupo" aria-hidden="true">
-        <li>Golden</li><li>Chow chow</li><li>Yorkshire</li><li>Maltês</li><li>Spitz</li><li>Shih Tzu</li><li>Bernese</li><li>e a do seu pet</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SERVICOS -->
-  <section class="secao servicos" id="servicos">
-    <div class="wrap">
-      <div class="servicos__topo">
-        <h2 class="revela">Serviços</h2>
-        <p class="revela">O valor muda com o porte e a pelagem. Agende pelo site e a equipe responde com o valor certo pro seu pet.</p>
+  <section class="secao secao--creme racas" aria-labelledby="racas-tit">
+    <p class="fantasma racas__fantasma" aria-hidden="true">raças</p>
+    <div class="wrap racas__grade">
+      <div class="racas__cabeca revela">
+        <h2 id="racas-tit">Do Yorkshire ao Bernese de 50 kg</h2>
+        <p>Todos os portes são bem-vindos. Algumas raças já são de casa.</p>
       </div>
-      <ol class="lista-servicos">
-        <li class="revela">
-          <a href="#form-agenda" data-servico="Banho">
-            <span class="ls__n">01</span>
-            <span class="ls__txt"><span class="ls__nome">Banho relaxante</span><span class="ls__desc">Com tempo e paciência, do jeito que cada pelagem pede.</span></span>
-            <span class="ls__foto"><img src="assets/img/banho-relaxante.jpg" alt="" width="640" height="750" loading="lazy"></span>
-            <span class="ls__cta">Agendar<svg class="seta"><use href="#seta"/></svg></span>
-          </a>
-        </li>
-        <li class="revela">
-          <a href="#form-agenda" data-servico="Tosa ou trimming">
-            <span class="ls__n">02</span>
-            <span class="ls__txt"><span class="ls__nome">Tosa e trimming</span><span class="ls__desc">Acabamento alinhado, respeitando a raça e o estilo que você quer.</span></span>
-            <span class="ls__foto"><img src="assets/img/trimming-spitz.jpg" alt="" width="900" height="828" loading="lazy"></span>
-            <span class="ls__cta">Agendar<svg class="seta"><use href="#seta"/></svg></span>
-          </a>
-        </li>
-        <li class="revela">
-          <a href="#form-agenda" data-servico="Penteado e acabamento">
-            <span class="ls__n">03</span>
-            <span class="ls__txt"><span class="ls__nome">Penteados e acabamento</span><span class="ls__desc">Laços, bandanas e penteados de princesa. O luxo está nos detalhes.</span></span>
-            <span class="ls__foto"><img src="assets/img/penteado-princesa.jpg" alt="" width="900" height="911" loading="lazy"></span>
-            <span class="ls__cta">Agendar<svg class="seta"><use href="#seta"/></svg></span>
-          </a>
-        </li>
-        <li class="revela">
-          <a href="#form-agenda" data-porte="gigante">
-            <span class="ls__n">04</span>
-            <span class="ls__txt"><span class="ls__nome">Cães grandes e gigantes</span><span class="ls__desc">Do Golden ao Bernese de 50 kg, com espaço e equipe pros grandões.</span></span>
-            <span class="ls__foto"><img src="assets/img/banho-bernese.jpg" alt="" width="640" height="749" loading="lazy"></span>
-            <span class="ls__cta">Agendar<svg class="seta"><use href="#seta"/></svg></span>
-          </a>
-        </li>
-      </ol>
+      <ul class="racas__lista racas__lista--a revela">
+        <li><strong>Yorkshire</strong><span>Pequeno</span></li>
+        <li><strong>Maltês</strong><span>Pequeno</span></li>
+        <li><strong>Shih Tzu</strong><span>Pequeno</span></li>
+        <li><strong>Spitz</strong><span>Pequeno</span></li>
+      </ul>
+      <figure class="racas__foto revela"><img src="assets/img/spitz-laco.jpg" alt="Spitz preto com gravata borboleta e presilha amarela" width="640" height="640" loading="lazy"></figure>
+      <ul class="racas__lista racas__lista--b revela">
+        <li><strong>Chow chow</strong><span>Médio</span></li>
+        <li><strong>Golden</strong><span>Grande</span></li>
+        <li><strong>Bernese</strong><span>Gigante</span></li>
+        <li><strong>A do seu pet</strong><span>Todos</span></li>
+      </ul>
     </div>
   </section>
 
   <!-- NATAL -->
   <section class="natal" id="natal">
+    <svg class="rabisco rabisco--1" aria-hidden="true"><use href="#osso"/></svg>
+    <svg class="rabisco rabisco--2" aria-hidden="true"><use href="#pata"/></svg>
+    <svg class="rabisco rabisco--3" aria-hidden="true"><use href="#pata"/></svg>
+    <svg class="rabisco rabisco--4" aria-hidden="true"><use href="#osso"/></svg>
     <div class="wrap natal__grade">
       <div class="natal__txt">
-        <p class="rotulo revela">Fim de ano</p>
-        <h2 class="revela">O Natal já chegou <em>na Matilha.</em></h2>
-        <p class="natal__intro revela">A agenda de dezembro está aberta e as vagas são limitadas. Garanta o banho de fim de ano do seu pet.</p>
-        <dl class="datas revela">
-          <div><dt>Segundas de dezembro</dt><dd>Abertos</dd></div>
-          <div><dt>24 de dezembro</dt><dd>Até 15h</dd></div>
-          <div><dt>25 de dezembro</dt><dd class="fechado">Fechado</dd></div>
-          <div><dt>26, 28, 29 e 30</dt><dd>Normal</dd></div>
-          <div><dt>31 de dezembro</dt><dd class="fechado">Fechado</dd></div>
-        </dl>
-        <a class="btn btn--papel revela" href="#agendar">Garantir horário em dezembro</a>
+        <p class="tag tag--vidro revela"><svg class="pata-ico"><use href="#pata"/></svg>Fim de ano</p>
+        <h2 class="revela">O Natal já chegou na Matilha</h2>
+        <p class="revela">A agenda de dezembro está aberta e as vagas são limitadas. Garanta o banho de fim de ano do seu pet.</p>
+        <a class="btn btn--branco btn--seta revela" href="#agendar">Garantir meu horário<span class="seta-bola"><svg class="seta"><use href="#seta"/></svg></span></a>
       </div>
       <figure class="natal__foto revela">
         <img src="assets/img/natal-arvore.jpg" alt="Detalhe da árvore de Natal da loja, com laços vermelhos, bolas douradas e uma meia de Papai Noel" width="640" height="521" loading="lazy">
+        <span class="balao">Vagas limitadas!</span>
       </figure>
+    </div>
+    <div class="wrap">
+      <dl class="datas revela">
+        <div><dt>Segundas de dezembro</dt><dd>Abertos</dd></div>
+        <div><dt>24 de dezembro</dt><dd>Até 15h</dd></div>
+        <div><dt>25 de dezembro</dt><dd class="fechado">Fechado</dd></div>
+        <div><dt>26, 28, 29 e 30</dt><dd>Normal</dd></div>
+        <div><dt>31 de dezembro</dt><dd class="fechado">Fechado</dd></div>
+      </dl>
     </div>
   </section>
 
   <!-- DEPOIMENTOS -->
   <section class="secao depo" id="depoimentos">
     <div class="wrap">
-      <p class="rotulo revela">Quem já é da matilha</p>
-      <figure class="depo__grande revela">
-        <blockquote><p>Hoje, ela sai tranquila, e sei que é por conta do carinho que ela recebe, além da honestidade e a qualidade do banho.</p></blockquote>
-        <figcaption>Comentário no Instagram da Matilha</figcaption>
-      </figure>
-      <div class="depo__par">
-        <figure class="revela">
-          <blockquote><p>Vocês são incríveis! Eu e a minha bb Cacau amamos o atendimento Matilha.</p></blockquote>
-          <figcaption>Sobre a Cacau, no Instagram</figcaption>
-        </figure>
-        <figure class="revela" data-atraso="1">
-          <blockquote><p>Não vejo a hora do próximo banho da Chloe.</p></blockquote>
-          <figcaption>Sobre a Chloe, no Instagram</figcaption>
-        </figure>
+      <div class="cabeca revela">
+        <p class="tag"><svg class="pata-ico"><use href="#pata"/></svg>Quem já é da matilha</p>
+        <h2>O que os tutores dizem</h2>
+      </div>
+      <div class="depo__capsula">
+        <ul class="depo__lista">
+          <li class="revela"><span class="aspas" aria-hidden="true">&ldquo;</span><p>Hoje, ela sai tranquila, e sei que é por conta do carinho que ela recebe, além da honestidade e a qualidade do banho.</p><span class="depo__quem"><svg class="pata-ico"><use href="#pata"/></svg>Comentário no Instagram</span></li>
+          <li class="revela" data-atraso="1"><span class="aspas" aria-hidden="true">&ldquo;</span><p>Vocês são incríveis! Eu e a minha bb Cacau amamos o atendimento Matilha.</p><span class="depo__quem"><svg class="pata-ico"><use href="#pata"/></svg>Sobre a Cacau</span></li>
+          <li class="revela" data-atraso="2"><span class="aspas" aria-hidden="true">&ldquo;</span><p>Não vejo a hora do próximo banho da Chloe.</p><span class="depo__quem"><svg class="pata-ico"><use href="#pata"/></svg>Sobre a Chloe</span></li>
+        </ul>
+        <p class="fantasma depo__fantasma" aria-hidden="true">au au</p>
       </div>
     </div>
   </section>
 
-  <!-- INSTAGRAM -->
-  <section class="insta" aria-labelledby="insta-tit">
+  <!-- INSTAGRAM E CLUBINHO -->
+  <section class="secao secao--topo0" aria-labelledby="insta-tit">
     <div class="wrap">
-      <div class="insta__topo">
-        <h2 id="insta-tit" class="revela">Direto do salão</h2>
-        <a class="link-seta revela" href="https://www.instagram.com/matilhapetclub/" target="_blank" rel="noopener">@matilhapetclub<svg class="seta"><use href="#seta"/></svg></a>
+      <div class="cabeca cabeca--linha revela">
+        <div>
+          <p class="tag"><svg class="pata-ico"><use href="#pata"/></svg>Direto do salão</p>
+          <h2 id="insta-tit">Cada detalhe, do laço ao penteado</h2>
+        </div>
+        <a class="btn btn--ferrugem" href="https://www.instagram.com/matilhapetclub/" target="_blank" rel="noopener">Ver no Instagram</a>
       </div>
-      <ul class="insta__grade">
-        <li class="revela"><a href="https://www.instagram.com/matilhapetclub/" target="_blank" rel="noopener"><img src="assets/img/penteado-minnie.jpg" alt="Penteado de princesa com laço da Minnie" width="900" height="821" loading="lazy"></a></li>
-        <li class="revela" data-atraso="1"><a href="https://www.instagram.com/matilhapetclub/" target="_blank" rel="noopener"><img src="assets/img/yorkshire-rosto.jpg" alt="Rosto de um Yorkshire com laço de pedrarias" width="720" height="720" loading="lazy"></a></li>
-        <li class="revela" data-atraso="2"><a href="https://www.instagram.com/matilhapetclub/" target="_blank" rel="noopener"><img src="assets/img/spitz-laco.jpg" alt="Spitz preto com gravata borboleta e presilha amarela" width="640" height="640" loading="lazy"></a></li>
-        <li class="revela" data-atraso="3"><a href="https://www.instagram.com/matilhapetclub/" target="_blank" rel="noopener"><img src="assets/img/natal-ursos.jpg" alt="Árvore de Natal ao lado da parede de ursinhos de pelúcia da loja" width="440" height="440" loading="lazy"></a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CLUBINHO -->
-  <section class="clubinho">
-    <div class="wrap clubinho__inner revela">
-      <h2>Clubinho Matilha</h2>
-      <p>Benefícios pra quem já é da casa. Pergunte no WhatsApp como fazer parte.</p>
-      <a class="link-seta" href="https://wa.me/5511966024153?text=Ol%C3%A1%2C%20Matilha!%20Vim%20pelo%20site%20e%20quero%20saber%20como%20funciona%20o%20Clubinho." target="_blank" rel="noopener">Quero saber do Clubinho<svg class="seta"><use href="#seta"/></svg></a>
+      <div class="mosaico">
+        <figure class="mosaico__a revela"><img src="assets/img/penteado-minnie.jpg" alt="Penteado de princesa com laço da Minnie" width="900" height="821" loading="lazy"><figcaption class="tag tag--branca">Penteado de princesa</figcaption></figure>
+        <figure class="mosaico__b revela" data-atraso="1"><img src="assets/img/natal-ursos.jpg" alt="Árvore de Natal ao lado da parede de ursinhos de pelúcia da loja" width="440" height="440" loading="lazy"><figcaption class="tag tag--branca">A loja no Natal</figcaption></figure>
+        <div class="clubinho revela" data-atraso="2">
+          <svg class="clubinho__pata" aria-hidden="true"><use href="#pata"/></svg>
+          <h3>Clubinho Matilha</h3>
+          <p>Benefícios pra quem já é da casa. Pergunte no WhatsApp como fazer parte.</p>
+          <a class="btn btn--branco btn--seta" href="https://wa.me/5511966024153?text=Ol%C3%A1%2C%20Matilha!%20Vim%20pelo%20site%20e%20quero%20saber%20como%20funciona%20o%20Clubinho." target="_blank" rel="noopener">Quero saber<span class="seta-bola"><svg class="seta"><use href="#seta"/></svg></span></a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- AGENDAR -->
-  <section class="secao agenda" id="agendar">
+  <section class="secao secao--creme agenda" id="agendar">
+    <svg class="rabisco rabisco--5" aria-hidden="true"><use href="#pata"/></svg>
     <div class="wrap agenda__grade">
       <div class="agenda__lado">
-        <p class="rotulo revela">Agendamento</p>
-        <h2 class="revela">Reserve o horário <em>do seu pet.</em></h2>
-        <p class="revela">Leva menos de um minuto. A mensagem chega pronta no WhatsApp da Matilha, e a equipe confirma o horário e o valor.</p>
-        <ul class="agenda__notas revela">
-          <li>Atendimento com hora marcada</li>
-          <li>Em dezembro, abrimos também às segundas</li>
+        <p class="tag revela"><svg class="pata-ico"><use href="#pata"/></svg>Agendamento</p>
+        <h2 class="revela">Reserve o horário do seu pet em menos de um minuto</h2>
+        <p class="revela">Escolha o serviço, conte do seu pet e diga o melhor dia. A mensagem chega pronta no WhatsApp da Matilha, e a equipe confirma o horário e o valor.</p>
+        <ul class="checks checks--uma revela">
+          <li><svg class="check-ico"><use href="#check"/></svg>Atendimento com hora marcada</li>
+          <li><svg class="check-ico"><use href="#check"/></svg>Em dezembro, abrimos também às segundas</li>
+          <li><svg class="check-ico"><use href="#check"/></svg>Resposta pelo WhatsApp</li>
         </ul>
       </div>
 
       <form class="form revela" id="form-agenda" novalidate>
-        <div class="form__topo">
-          <p class="form__passo" id="passo-txt" aria-live="polite">Passo 1 de 3</p>
-          <ol class="progresso" aria-hidden="true"><li class="ativo"></li><li></li><li></li></ol>
-        </div>
+        <p class="sr" id="passo-txt" aria-live="polite">Passo 1 de 3</p>
+        <ol class="progresso" aria-hidden="true">
+          <li class="ativo"><span>1</span>Serviço</li>
+          <li><span>2</span>Pet</li>
+          <li><span>3</span>Quando</li>
+        </ol>
 
         <fieldset class="etapa ativa" data-etapa="1">
           <legend>Qual serviço?</legend>
@@ -270,18 +293,18 @@
             <label class="escolha"><input type="radio" name="servico" value="Banho"><span>Banho</span></label>
             <label class="escolha"><input type="radio" name="servico" value="Banho e tosa"><span>Banho e tosa</span></label>
             <label class="escolha"><input type="radio" name="servico" value="Tosa ou trimming"><span>Tosa ou trimming</span></label>
-            <label class="escolha"><input type="radio" name="servico" value="Penteado e acabamento"><span>Penteado e acabamento</span></label>
+            <label class="escolha"><input type="radio" name="servico" value="Penteado e acabamento"><span>Penteado</span></label>
           </div>
           <p class="erro" data-erro="servico">Escolha um serviço.</p>
           <p class="form__rotulo">Porte do pet</p>
-          <div class="portes">
-            <label class="porte"><input type="radio" name="porte" value="pequeno"><span>Pequeno<small>até 10 kg</small></span></label>
-            <label class="porte"><input type="radio" name="porte" value="médio"><span>Médio<small>10 a 25 kg</small></span></label>
-            <label class="porte"><input type="radio" name="porte" value="grande"><span>Grande<small>25 a 45 kg</small></span></label>
-            <label class="porte"><input type="radio" name="porte" value="gigante"><span>Gigante<small>acima de 45 kg</small></span></label>
+          <div class="escolhas escolhas--4">
+            <label class="escolha"><input type="radio" name="porte" value="pequeno"><span>Pequeno<small>até 10 kg</small></span></label>
+            <label class="escolha"><input type="radio" name="porte" value="médio"><span>Médio<small>10 a 25 kg</small></span></label>
+            <label class="escolha"><input type="radio" name="porte" value="grande"><span>Grande<small>25 a 45 kg</small></span></label>
+            <label class="escolha"><input type="radio" name="porte" value="gigante"><span>Gigante<small>mais de 45 kg</small></span></label>
           </div>
           <p class="erro" data-erro="porte">Escolha o porte.</p>
-          <div class="form__acoes"><button class="btn btn--tinta btn--cheio" type="button" data-proximo>Continuar<svg class="seta"><use href="#seta"/></svg></button></div>
+          <div class="form__acoes"><button class="btn btn--ferrugem btn--cheio" type="button" data-proximo>Continuar<svg class="seta"><use href="#seta"/></svg></button></div>
         </fieldset>
 
         <fieldset class="etapa" data-etapa="2">
@@ -296,7 +319,7 @@
           </label>
           <label class="campo campo--outra" id="campo-outra"><span>Qual raça?</span><input type="text" name="raca_outra" placeholder="Border Collie"></label>
           <p class="erro" data-erro="raca">Escolha a raça.</p>
-          <div class="form__acoes"><button class="voltar" type="button" data-voltar>Voltar</button><button class="btn btn--tinta btn--cheio" type="button" data-proximo>Continuar<svg class="seta"><use href="#seta"/></svg></button></div>
+          <div class="form__acoes"><button class="btn btn--linha" type="button" data-voltar>Voltar</button><button class="btn btn--ferrugem btn--cheio" type="button" data-proximo>Continuar<svg class="seta"><use href="#seta"/></svg></button></div>
         </fieldset>
 
         <fieldset class="etapa" data-etapa="3">
@@ -304,9 +327,9 @@
           <div class="duas">
             <label class="campo"><span>Dia</span><input type="date" name="dia"></label>
             <div class="campo"><span>Turno</span>
-              <div class="turnos">
-                <label class="porte"><input type="radio" name="turno" value="de manhã"><span>Manhã</span></label>
-                <label class="porte"><input type="radio" name="turno" value="à tarde"><span>Tarde</span></label>
+              <div class="escolhas escolhas--turno">
+                <label class="escolha"><input type="radio" name="turno" value="de manhã"><span>Manhã</span></label>
+                <label class="escolha"><input type="radio" name="turno" value="à tarde"><span>Tarde</span></label>
               </div>
             </div>
           </div>
@@ -317,30 +340,31 @@
           <p class="erro" data-erro="tutor">Diga o seu nome.</p>
           <label class="campo"><span>Observação <small>(opcional)</small></span><textarea name="obs" rows="2" placeholder="Ele tem medo do secador"></textarea></label>
           <div class="previa-msg" id="previa-msg" hidden>
-            <p class="form__rotulo">A mensagem que vai pro WhatsApp</p>
+            <p class="form__rotulo"><svg class="whats-ico"><use href="#whats"/></svg>A mensagem que vai pro WhatsApp</p>
             <pre id="texto-msg"></pre>
           </div>
-          <div class="form__acoes"><button class="voltar" type="button" data-voltar>Voltar</button><button class="btn btn--tinta btn--cheio" type="submit"><svg class="whats-ico"><use href="#whats"/></svg>Enviar pelo WhatsApp</button></div>
+          <div class="form__acoes"><button class="btn btn--linha" type="button" data-voltar>Voltar</button><button class="btn btn--ferrugem btn--cheio" type="submit"><svg class="whats-ico"><use href="#whats"/></svg>Enviar no WhatsApp</button></div>
         </fieldset>
       </form>
     </div>
   </section>
 
   <!-- ONDE ESTAMOS -->
-  <section class="secao onde" id="onde">
-    <div class="wrap onde__grade">
-      <div class="onde__info">
-        <p class="rotulo revela">Onde estamos</p>
-        <address class="revela"><span class="onde__rua">Rua Eng. Guilherme Cristiano Frender, 1485</span>Loja 1493, Vila Antonieta<br>São Paulo, SP &middot; CEP 03477-000</address>
-        <dl class="onde__dados revela">
-          <div><dt>Atendimento</dt><dd>Com hora marcada</dd></div>
-          <div><dt>Dezembro</dt><dd>Abertos também às segundas</dd></div>
-        </dl>
-        <ul class="onde__links revela">
-          <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20Engenheiro%20Guilherme%20Cristiano%20Frender%2C%201485%2C%20Vila%20Antonieta%2C%20S%C3%A3o%20Paulo%20SP" target="_blank" rel="noopener"><span>Como chegar</span><svg class="seta"><use href="#seta"/></svg></a></li>
-          <li><a href="https://wa.me/5511966024153?text=Ol%C3%A1%2C%20Matilha!%20Vim%20pelo%20site%20e%20queria%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener"><span>WhatsApp <small>(11) 96602-4153</small></span><svg class="seta"><use href="#seta"/></svg></a></li>
-          <li><a href="https://www.instagram.com/matilhapetclub/" target="_blank" rel="noopener"><span>Instagram <small>@matilhapetclub</small></span><svg class="seta"><use href="#seta"/></svg></a></li>
+  <section class="secao" id="onde">
+    <div class="wrap onde">
+      <div class="onde__card revela">
+        <p class="tag"><svg class="pata-ico"><use href="#pata"/></svg>Onde estamos</p>
+        <h2>Na Vila Antonieta, Zona Leste de São Paulo</h2>
+        <address>Rua Eng. Guilherme Cristiano Frender, 1485, loja 1493<br>Vila Antonieta, São Paulo, SP &middot; CEP 03477-000</address>
+        <ul class="checks checks--uma">
+          <li><svg class="check-ico"><use href="#check"/></svg>Atendimento com hora marcada</li>
+          <li><svg class="check-ico"><use href="#check"/></svg>Em dezembro, abertos também às segundas</li>
         </ul>
+        <div class="acoes">
+          <a class="btn btn--ferrugem" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20Engenheiro%20Guilherme%20Cristiano%20Frender%2C%201485%2C%20Vila%20Antonieta%2C%20S%C3%A3o%20Paulo%20SP" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn btn--linha" href="https://wa.me/5511966024153?text=Ol%C3%A1%2C%20Matilha!%20Vim%20pelo%20site%20e%20queria%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener"><svg class="whats-ico"><use href="#whats"/></svg>WhatsApp</a>
+          <a class="btn btn--linha" href="https://www.instagram.com/matilhapetclub/" target="_blank" rel="noopener">Instagram</a>
+        </div>
       </div>
       <div class="mapa revela">
         <iframe title="Mapa com a localização da Matilha Pet Club" src="https://www.google.com/maps?q=Rua%20Engenheiro%20Guilherme%20Cristiano%20Frender%2C%201485%2C%20Vila%20Antonieta%2C%20S%C3%A3o%20Paulo%20SP&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -349,11 +373,11 @@
   </section>
 
   <!-- DUVIDAS -->
-  <section class="secao duvidas" id="duvidas">
-    <div class="wrap duvidas__grade">
-      <div class="revela">
+  <section class="secao secao--creme" id="duvidas">
+    <div class="wrap duvidas">
+      <div class="cabeca revela">
+        <p class="tag"><svg class="pata-ico"><use href="#pata"/></svg>Dúvidas</p>
         <h2>Antes de agendar</h2>
-        <p>Ficou outra dúvida? <a href="https://wa.me/5511966024153?text=Ol%C3%A1%2C%20Matilha!%20Vim%20pelo%20site%20e%20queria%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Chame no WhatsApp.</a></p>
       </div>
       <div class="faq revela">
         <details><summary>Preciso agendar?</summary><p>Sim, o atendimento é com hora marcada. Escolha o serviço e o dia aqui no site, e a mensagem chega pronta no WhatsApp da Matilha.</p></details>
@@ -369,11 +393,14 @@
 
 <footer class="rodape">
   <div class="wrap">
+    <div class="rodape__topo">
+      <a class="marca marca--clara" href="#inicio" aria-label="Matilha Pet Club, voltar ao início">
+        <img src="assets/img/logo-matilha.png" alt="" width="52" height="52" loading="lazy">
+        <span class="marca__nome">Matilha<small>Pet Club</small></span>
+      </a>
+      <p>Para muitos, são apenas pets. Para nós, são parte da matilha.</p>
+    </div>
     <div class="rodape__grade">
-      <div class="rodape__marca">
-        <img src="assets/img/logo-matilha.png" alt="Logo da Matilha Pet Club" width="64" height="64" loading="lazy">
-        <p>Banhos relaxantes e tosas num ambiente moderno e aconchegante.</p>
-      </div>
       <div>
         <p class="rodape__tit">Endereço</p>
         <p>Rua Eng. Guilherme Cristiano Frender, 1485, loja 1493<br>Vila Antonieta, São Paulo, SP</p>
@@ -384,10 +411,12 @@
       </div>
       <div>
         <p class="rodape__tit">Atendimento</p>
-        <p>Com hora marcada.<br><a href="#agendar">Agendar horário</a></p>
+        <p>Com hora marcada.<br>Em dezembro, também às segundas.</p>
+      </div>
+      <div>
+        <a class="btn btn--branco btn--seta" href="#agendar">Agendar horário<span class="seta-bola"><svg class="seta"><use href="#seta"/></svg></span></a>
       </div>
     </div>
-    <p class="rodape__nome" aria-hidden="true">Matilha</p>
     <div class="rodape__fim">
       <p>Matilha Pet Club LTDA &middot; CNPJ 63.739.992/0001-93</p>
       <p>Prévia de site feita por Gustavo Fugihara</p>
